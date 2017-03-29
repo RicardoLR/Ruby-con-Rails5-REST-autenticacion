@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Playlistprivates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number of votes</th>
+      <th>Iduser</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @playlistprivates.each do |playlistprivate| %>
+      <tr>
+        <td><%= playlistprivate.name %></td>
+        <td><%= playlistprivate.number_of_votes %></td>
+        <td><%= playlistprivate.iduser %></td>
+        <td><%= link_to 'Show', playlistprivate %></td>
+        <td><%= link_to 'Edit', edit_playlistprivate_path(playlistprivate) %></td>
+        <td><%= link_to 'Destroy', playlistprivate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Playlistprivate', new_playlistprivate_path %>

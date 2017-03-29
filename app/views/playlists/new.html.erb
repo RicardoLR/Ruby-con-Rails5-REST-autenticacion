@@ -1,0 +1,24 @@
+
+<!-- Ruta localhost:3000/playlists/new -->
+
+<!-- Usando helper de form  -->
+<%= form_for(@playlist) do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :number_of_votes %>
+  <%= f.text_field :number_of_votes %>
+
+  <%= f.submit %>
+
+<% end %>
+
+
+<br> 
+Usamos form_tag solo para ver como es:
+<br>
+
+<%= form_tag do %>
+  Form contents
+<% end %>

@@ -1,0 +1,40 @@
+
+<!--
+  < % = render 'form', playlistprivate: @playlistprivate % >
+-->
+
+
+<%= form_for(playlistprivate) do |f| %>
+
+  <% if playlistprivate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(playlistprivate.errors.count, "error") %> prohibited this playlistprivate from being saved:</h2>
+
+      <ul>
+      <% playlistprivate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :number_of_votes %>
+    <%= f.number_field :number_of_votes %>
+  </div>
+
+  <div class="field">
+    <%= f.label :iduser %>
+    <%= f.number_field :iduser %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

@@ -5,25 +5,31 @@
 #   gem 'sqlite3'
 #
 default: &default
+  # =====================================
   # Ejemplo ara postgresql
-  adapter: postgresql
-
-  encoding: unicode
-  username: richi
-  password: richi
+  # adapter: postgresql
+  #
+  # encoding: unicode
+  # username: richi
+  # password: richi
+  # =====================================
 
   # Ejemplo para sqlite3
-  # adapter: sqlite3
+  adapter: sqlite3
+
   pool: 5
   timeout: 5000
 
 development:
   <<: *default
+
+  # =====================================
   # Ejemplo ara postgresql
-  database: musicapp_ruby_development
+  # database: musicapp_ruby_development
+  # =====================================
 
   # Ejemplo para sqlite3
-  # database: db/development.sqlite3
+  database: db/development.sqlite3
 
 
 # Warning: The database defined as "test" will be erased and
@@ -32,15 +38,17 @@ development:
 test:
   <<: *default
   # Ejemplo ara postgresql
-  database: musicapp_ruby_test
+  # database: musicapp_ruby_test
 
   # Ejemplo para sqlite3
-  # database: db/test.sqlite3
+  database: db/test.sqlite3
 
 production:
   <<: *default
+  # =====================================
   # Ejemplo ara postgresql
-  database: musicapp_ruby_production
+  # database: musicapp_ruby_production
+  # =====================================
 
   # Ejemplo para sqlite3
-  # database: db/production.sqlite3
+  database: db/production.sqlite3

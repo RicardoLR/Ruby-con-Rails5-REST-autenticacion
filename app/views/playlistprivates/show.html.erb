@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @playlistprivate.name %>
+</p>
+
+<p>
+  <strong>Number of votes:</strong>
+  <%= @playlistprivate.number_of_votes %>
+</p>
+
+<p>
+  <strong>Iduser:</strong>
+  <%= @playlistprivate.iduser %>
+</p>
+
+<%= link_to 'Edit', edit_playlistprivate_path(@playlistprivate) %> |
+<%= link_to 'Back', playlistprivates_path %>

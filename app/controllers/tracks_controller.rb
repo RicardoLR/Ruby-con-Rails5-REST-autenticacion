@@ -13,22 +13,20 @@ class TracksController < ApplicationController
   def show
   end
 
+  # =================== GET Y POST de URL tracks/new=================================
   # GET /tracks/new
   def new
     @track = Track.new
   end
 
-  # GET /tracks/1/edit
-  def edit
-  end
-
   # POST /tracks
   # POST /tracks.json
   def create
-    @track = Track.new(track_params)
+    @track = Track.new(track_params) # track_params valida, ver metodo mas abajo
 
     respond_to do |format|
       if @track.save
+        # redirect_to a RUTA /tracks/3 (sin decirle metodo ni id)  y envia var notice
         format.html { redirect_to @track, notice: 'Track was successfully created.' }
         format.json { render :show, status: :created, location: @track }
       else
@@ -37,6 +35,12 @@ class TracksController < ApplicationController
       end
     end
 
+  end
+
+  # =================== FIN DE GET Y POST =================================
+
+  # GET /tracks/1/edit
+  def edit
   end
 
   # PATCH/PUT /tracks/1

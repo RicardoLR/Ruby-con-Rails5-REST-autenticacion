@@ -36,11 +36,13 @@ class TracksController < ApplicationController
         format.json { render json: @track.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /tracks/1
   # PATCH/PUT /tracks/1.json
   def update
+
     respond_to do |format|
       if @track.update(track_params)
         format.html { redirect_to @track, notice: 'Track was successfully updated.' }
@@ -50,6 +52,7 @@ class TracksController < ApplicationController
         format.json { render json: @track.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # DELETE /tracks/1

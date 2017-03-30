@@ -12,17 +12,17 @@
 
 ActiveRecord::Schema.define(version: 20170329203350) do
 
-  create_table "play_lists", force: :cascade do |t|
-    t.string  "name"
-    t.integer "number_of_votes"
-  end
-
   create_table "playlistprivates", force: :cascade do |t|
     t.string   "name"
     t.integer  "number_of_votes"
     t.integer  "iduser"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "playlists", force: :cascade do |t|
+    t.string  "name"
+    t.integer "number_of_votes"
   end
 
   create_table "tracks", force: :cascade do |t|

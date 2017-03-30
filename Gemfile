@@ -13,6 +13,9 @@ gem 'sqlite3'
 
 gem 'pg'
 
+gem 'rest-client'
+
+
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -67,5 +70,6 @@ gem 'rspotify'
 # ==================================
 # gema para seguridad autenticacion
 gem 'devise'
+
 
 # ==================================

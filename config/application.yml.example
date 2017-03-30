@@ -1,0 +1,5 @@
+
+
+development:
+  SUPER_SECRET_KEY: 'LLAVE_FALSA'
+  SEPER_SECRET_ID: 'ID'

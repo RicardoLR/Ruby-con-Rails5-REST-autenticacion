@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'spotify/search'
+
   resources :playlistprivates
   # Creado por Models
   # > rails generate scaffold track title:string album:string artist:string

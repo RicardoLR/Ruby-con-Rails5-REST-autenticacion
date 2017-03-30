@@ -29,3 +29,11 @@
 <br>
 
 <%= link_to 'New Track', new_track_path %>
+
+
+<!-- Formulario para spotify -->
+<%= form_tag("/spotify/search", method: "get") do %>
+  <%= text_field_tag :title %>
+
+  <%= submit_tag("Search") %>
+<% end %>

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  devise_for :views
+  devise_for :users
   get 'spotify/search'
 
   resources :playlistprivates
@@ -10,5 +12,9 @@ Rails.application.routes.draw do
   # Usar plural, nombre como queramos
   resources :playlists
 
+  root to: "tracks#index"
+
+  # algun error
+  # devise_for :installs
 
 end

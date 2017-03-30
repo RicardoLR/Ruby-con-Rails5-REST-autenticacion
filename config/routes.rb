@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   # Usar plural, nombre como queramos
   resources :playlists
 
+  # aqui le digo que es mi pagina principal
   root to: "tracks#index"
 
   # algun error

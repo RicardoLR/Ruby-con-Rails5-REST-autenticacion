@@ -1,6 +1,15 @@
 class PlaylistprivatesController < ApplicationController
 
 
+  # Autenticacion en todo el controller rutas
+  before_action :authenticate_user!
+
+  # o solo proteje con sesion el index
+  # before_action :authenticate_user!, :only => [:index]
+
+  # skip_before_action :authenticate_user!, :only => [:index]
+
+
   # GET /playlistprivates
   # GET /playlistprivates.json
   def index
